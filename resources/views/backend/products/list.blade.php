@@ -17,6 +17,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Price</th>
                 <th>Stock Quantity</th>
                 <th>Image</th>
                 <th>Actions</th>
@@ -27,6 +28,7 @@
             <tr id="order-row-{{ $product->id }}">
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
+                <td>Rs. {{ $product->price }}</td>
                 <td>{{ $product->stock_quantity }}</td>
                 <td class="order-status">
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" style="max-width: 100px;">

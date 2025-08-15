@@ -8,6 +8,7 @@
             <tr>
                 <th>ID</th>
                 <th>Customer</th>
+                <th>Product</th>
                 <th>Total</th>
                 <th>Status</th>
                 <th>Update Status</th>
@@ -18,6 +19,11 @@
             <tr id="order-row-{{ $order->id }}">
                 <td>{{ $order->id }}</td>
                 <td>{{ $order->customer_name }}</td>
+                <td>
+                    @foreach($order->products as $product)
+                        {{ $product->name }}<br>
+                    @endforeach
+                </td>
                 <td>{{ $order->total_price }}</td>
                 <td class="order-status">{{ $order->status }}</td>
                 <td>
